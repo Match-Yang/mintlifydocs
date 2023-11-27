@@ -59,6 +59,10 @@
   "analytics": {
     "ga4": {
         "measurementId": "G-64H22QH8JZ"
+    },
+    "hotjar": {
+        "hjid": "required",
+        "hjsv": "required"
     }
   }
 
