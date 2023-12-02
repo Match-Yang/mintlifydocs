@@ -21,10 +21,26 @@
     "name": "Dashboard",
     "url": "https://dashboard.mintlify.com"
   },
+  "anchors": [
+    {
+      "name": "API Reference",
+      "url": "api-reference",
+      "icon": "comments"
+    },
+    {
+      "name": "My API Reference",
+      "url": "openapi-reference",
+      "icon": "comments"
+    }
+  ],
   "tabs": [
     {
       "name": "API Reference",
       "url": "api-reference"
+    },
+    {
+      "name": "My API Reference",
+      "url": "openapi-reference"
     }
   ],
   "navigation": [
@@ -47,6 +63,15 @@
         "api-reference/endpoint/create",
         "api-reference/endpoint/update",
         "api-reference/endpoint/delete"
+      ]
+    },
+    {
+      "group": "My Endpoint Examples",
+      "pages": [
+        "openapi-reference/create-user",
+        "openapi-reference/delete-user-by-id",
+        "openapi-reference/get-user-by-id",
+        "openapi-reference/update-user-by-id"
       ]
     }
   ],
