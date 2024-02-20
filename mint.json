@@ -7,10 +7,9 @@
   },
   "favicon": "/favicon.png",
   "colors": {
-    "primary": "#FF8C00",
-    "light": "#FFA500",
-    "dark": "#FF4500"
+    "primary": "#FF0000"
   },
+  "openapi": ["/pet-openapi.json"],
   "topbarLinks": [
     {
       "name": "Documentation",
@@ -18,26 +17,35 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboard",
-    "url": "https://dashboard.mintlify.com"
+    "type": "github",
+    "url": "https://github.com/Match-Yang/mintlifydocs"
   },
+  "versions": ["v2", "v1"],
   "anchors": [
     {
-      "name": "API Reference",
-      "url": "api-reference",
-      "icon": "comments"
+      "name": "API Reference v1",
+      "url": "v1/api-reference",
+      "icon": "comments",
+      "version": "v1"
+    },
+    {
+      "name": "API Reference v2",
+      "url": "v2/api-reference",
+      "icon": "comments",
+      "version": "v2"
     },
     {
       "name": "My API Reference",
       "url": "openapi-reference",
       "icon": "comments"
+    },
+    {
+      "name": "Pet API",
+      "url": "openapi-pet",
+      "icon": "comments"
     }
   ],
   "tabs": [
-    {
-      "name": "API Reference",
-      "url": "api-reference"
-    },
     {
       "name": "My API Reference",
       "url": "openapi-reference"
@@ -50,19 +58,37 @@
     },
     {
       "group": "Essentials",
-      "pages": ["essentials/markdown", "essentials/code", "essentials/images", "essentials/settings", "essentials/navigation"]
+      "pages": ["essentials/markdown", "essentials/images", "essentials/settings", "essentials/navigation"]
     },
     {
       "group": "API Documentation",
-      "pages": ["api-reference/authentication"]
+      "pages": [
+        "api-reference/authentication"
+      ]
     },
     {
       "group": "Endpoint Examples",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
+        {
+          "group": "V1",
+          "pages": [
+            "v1/api-reference/endpoint/get",
+            "v1/api-reference/endpoint/create",
+            "v1/api-reference/endpoint/update",
+            "v1/api-reference/endpoint/delete"
+          ],
+          "version": "v1"
+        },
+        {
+          "group": "V2",
+          "pages": [
+            "v2/api-reference/endpoint/get",
+            "v2/api-reference/endpoint/create",
+            "v2/api-reference/endpoint/update",
+            "v2/api-reference/endpoint/delete"
+          ],
+          "version": "v2"
+        }
       ]
     },
     {
@@ -72,6 +98,14 @@
         "openapi-reference/delete-user-by-id",
         "openapi-reference/get-user-by-id",
         "openapi-reference/update-user-by-id"
+      ]
+    },
+    {
+      "group": "Pet API",
+      "pages": [
+        "openapi-pet/pet/add-a-new-pet-to-the-store",
+        "openapi-pet/pet/deletes-a-pet",
+        "openapi-pet/pet/find-pet-by-id"
       ]
     }
   ],
